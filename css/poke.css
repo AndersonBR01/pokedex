@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;900;1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    border: 0;
+    outline: none;
+    font-family: 'Nunito', sans-serif;
+
+}
+h1{
+    letter-spacing: 10px;
+}
+body {
+    background: linear-gradient(to right, #d4d3dd, #efefbb);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.pokeContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+
+}
+
+.pokemon {
+    background-color: #eee;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+    margin: 10px;
+    padding: 25px;
+    text-align: center;
+
+}
+
+.imgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255 , 255, 255, 0.6);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+
+
+}
+
+.imgContainer img {
+    max-width: 90px;
+
+}
+
+.info{
+    margin-top: 20px;
+
+}
+
+.number {
+    background-color: rgba(0 , 0, 0, 0.15);
+    padding: 2px 3px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+
+}
+
+.name {
+    margin: 15px 0 7px;
+    letter-spacing: 1.5px;
+
+}
+
+/*
+colors = {
+    fire: '#FDDFDF',
+    grass: '#DEFDE0',
+    electric: '#FCF7DE',
+    water: '#DEF3FD',
+    ground: '#f4e7da',
+    rock: '#d5d5d4',
+    fairy: '#fceaff',
+    poison: '#98d7a5',
+    bug: '#f8d5a3',
+    dragon: '#97b3e6',
+    psychic: '#eaeda1',
+    flying: '#F5F5F5',
+    fighting: '#E6E0D4',
+    normal: '#F5F5F5'
+}
+*/
