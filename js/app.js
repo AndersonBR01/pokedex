@@ -1,5 +1,5 @@
 const pokeContainer = document.querySelector('#pokeContainer');
-const pokemonCount = 150;
+const pokemonCount = 210;
 const colors = {
     fire: '#FDDFDF',
     grass: '#DEFDE0',
@@ -37,6 +37,28 @@ const createPokemonsCard = (poke) =>{
     const card  =document.createElement('div');
     card.classList.add("pokemon");
 
-    const name = poke.name[0];
+    const name = poke.name[0].toUpperCase() + poke.name.slice(1);
+    const id = poke.id.toString().padStart(3, '0')
+
+    const pokeTypes = poke.types.map(type => type.type.name)
+    const type = mainTypes.find(type => pokeTypes.indexOf(type) > -1)
+    const color = colors[type]
+
+    card.style.backgroundColor = color;
+
+    const pokemonInnerHtml = `
+        <div class="imgContainer">
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${poke.id}.png" alt="${name}">
+        </div>
+        <div class="info">
+        <span class="number">${id}</span>
+        <h3 class="name">${name}</h3>
+        <span class="type"> Type: <span>${type}</span></span>
+        </div>
+    `
+
+    card.innerHTML = pokemonInnerHtml
+
+    pokeContainer.appendChild (card)
 }
 fetchPokemons();
